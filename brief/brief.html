@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный бриф на разработку логотипа</title>
+    <!-- Подключаем Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #2563eb;
+            cursor: pointer;
+            transition: background 0.15s ease-in-out;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden">
+
+        <!-- Шапка -->
+        <div class="bg-gradient-to-r from-slate-900 to-slate-800 px-8 py-10 text-white">
+            <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">Бриф на разработку логотипа</h1>
+            <p class="mt-2 text-slate-300 text-sm sm:text-base">Заполните интерактивную форму и сделайте скриншот для отправки дизайнеру.</p>
+        </div>
+
+        <div class="p-8 space-y-12">
+
+            <!-- Блок 1: Общая информация -->
+            <section class="space-y-6">
+                <h2 class="text-xl font-bold text-slate-950 border-b border-slate-100 pb-2 flex items-center gap-2">
+                    <span class="flex items-center justify-center bg-slate-900 text-white w-6 h-6 rounded-full text-xs">1</span>
+                    Общая информация
+                </h2>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Название в логотипе *</label>
+                        <input type="text" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition bg-slate-50/50" placeholder="Какое имя обыгрываем?">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Слоган (если есть)</label>
+                        <input type="text" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition bg-slate-50/50" placeholder="Текст слогана">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Описание компании или продукта *</label>
+                    <textarea rows="3" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition bg-slate-50/50" placeholder="Чем занимаетесь, в чем ваша уникальность?"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Целевая аудитория</label>
+                    <input type="text" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition bg-slate-50/50" placeholder="Кто ваш покупатель (возраст, пол, статус)?">
+                </div>
+            </section>
+
+            <!-- Блок 2: Интерактивные Ассоциации -->
+            <section class="space-y-4">
+                <h2 class="text-xl font-bold text-slate-950 border-b border-slate-100 pb-2 flex items-center gap-2">
+                    <span class="flex items-center justify-center bg-slate-900 text-white w-6 h-6 rounded-full text-xs">2</span>
+                    Ассоциативный ряд бренда <span class="text-xs font-normal text-slate-500 ml-1">(кликните на подходящие теги)</span>
+                </h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> ⚡ Скорость и динамика
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> 🌱 Экология и природа
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> 🤖 Инновации и IT
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> ☕ Уют и тепло
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> 🛡 Надежность и защита
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> 💎 Роскошь и статус
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> 🎨 Творчество и арт
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> 🧸 Детство и забота
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> 🎯 Строгость и фокус
+                    </label>
+                    <label class="px-4 py-2 border border-slate-200 rounded-full text-xs font-medium text-slate-600 cursor-pointer select-none hover:bg-slate-50 transition has-[:checked]:bg-blue-600 has-[:checked]:text-white has-[:checked]:border-blue-600">
+                        <input type="checkbox" class="hidden"> 🌍 Глобальность / Масштаб
+                    </label>
+                </div>
+            </section>
+
+            <!-- Блок 3: Цветовая палитра -->
+            <section class="space-y-6">
+                <h2 class="text-xl font-bold text-slate-950 border-b border-slate-100 pb-2 flex items-center gap-2">
+                    <span class="flex items-center justify-center bg-slate-900 text-white w-6 h-6 rounded-full text-xs">3</span>
+                    Цветовая палитра бренда
+                </h2>
+
+                <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-blue-950 text-sm">Интеграция с Coolors.co</h4>
+                        <p class="text-xs text-blue-800">Вы можете покрутить генератор цветов на сайте Coolors. Если найдете идеальное сочетание, просто скопируйте ссылку на него и скиньте мне вместе со скриншотами этого брифа!</p>
+                    </div>
+                    <a href="https://coolors.co/" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs rounded-lg transition shadow-sm inline-block whitespace-nowrap">Открыть Coolors.co ↗</a>
+                </div>
+
+                <div class="space-y-3">
+                    <label class="block text-sm font-semibold text-slate-700">Выберите примерное направление или готовую палитру:</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label class="p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition block has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="color_palette" value="Минимализм" class="mr-2 accent-blue-600">
+                            <span class="text-xs font-bold text-slate-900">Скандинавский минимализм</span>
+                            <div class="flex h-6 rounded-md overflow-hidden mt-2">
+                                <div class="w-1/4 bg-[#2B2D42]"></div><div class="w-1/4 bg-[#8D99AE]"></div><div class="w-1/4 bg-[#EDF2F4]"></div><div class="w-1/4 bg-[#EF233C]"></div>
+                            </div>
+                        </label>
+                        <label class="p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition block has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="color_palette" value="Киберпанк/Тек" class="mr-2 accent-blue-600">
+                            <span class="text-xs font-bold text-slate-900">Digital / Неон хайтек</span>
+                            <div class="flex h-6 rounded-md overflow-hidden mt-2">
+                                <div class="w-1/4 bg-[#0B0C10]"></div><div class="w-1/4 bg-[#1F2833]"></div><div class="w-1/4 bg-[#66FCF1]"></div><div class="w-1/4 bg-[#45A29E]"></div>
+                            </div>
+                        </label>
+                        <label class="p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition block has-[:checked]:border-blue-500 Henry has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="color_palette" value="Пастель/Премиум" class="mr-2 accent-blue-600">
+                            <span class="text-xs font-bold text-slate-900">Нежная пастель (Косметика/Детское)</span>
+                            <div class="flex h-6 rounded-md overflow-hidden mt-2">
+                                <div class="w-1/4 bg-[#FFB5A7]"></div><div class="w-1/4 bg-[#FFCAD4]"></div><div class="w-1/4 bg-[#F4ACB7]"></div><div class="w-1/4 bg-[#FFE5D9]"></div>
+                            </div>
+                        </label>
+                        <label class="p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition block has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="color_palette" value="Премиум золото" class="mr-2 accent-blue-600">
+                            <span class="text-xs font-bold text-slate-900">Премиум Luxury (Черный + Золото)</span>
+                            <div class="flex h-6 rounded-md overflow-hidden mt-2">
+                                <div class="w-1/4 bg-[#1A1A1A]"></div><div class="w-1/4 bg-[#333333]"></div><div class="w-1/4 bg-[#D4AF37]"></div><div class="w-1/4 bg-[#AA7C11]"></div>
+                            </div>
+                        </label>
+                        <label class="p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition block has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="color_palette" value="Винтаж/Ретро" class="mr-2 accent-blue-600">
+                            <span class="text-xs font-bold text-slate-900">Винтажный кофе / Кофейня</span>
+                            <div class="flex h-6 rounded-md overflow-hidden mt-2">
+                                <div class="w-1/4 bg-[#3D2314]"></div><div class="w-1/4 bg-[#643A21]"></div><div class="w-1/4 bg-[#967259]"></div><div class="w-1/4 bg-[#DBC1AC]"></div>
+                            </div>
+                        </label>
+                        <label class="p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition block has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="color_palette" value="Эко/Натуральный" class="mr-2 accent-blue-600">
+                            <span class="text-xs font-bold text-slate-900">Эко / Натуральная природа</span>
+                            <div class="flex h-6 rounded-md overflow-hidden mt-2">
+                                <div class="w-1/4 bg-[#2D4A22]"></div><div class="w-1/4 bg-[#537A32]"></div><div class="w-1/4 bg-[#A1C181]"></div><div class="w-1/4 bg-amber-100"></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Цвета-табу (какие оттенки точно НЕ использовать?)</label>
+                    <input type="text" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition bg-slate-50/50" placeholder="Например: кислотно-зеленый...">
+                </div>
+            </section>
+
+            <!-- Блок 4: Основной тип (ОБНОВЛЕНО С КАРТИНКАМИ) -->
+            <section class="space-y-4">
+                <h2 class="text-xl font-bold text-slate-950 border-b border-slate-100 pb-2 flex items-center gap-2">
+                    <span class="flex items-center justify-center bg-slate-900 text-white w-6 h-6 rounded-full text-xs">4</span>
+                    Основной тип логотипа <span class="text-xs font-normal text-slate-500 ml-1">(выберите один подходящий формат)</span>
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <!-- 1. Символический -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <!-- Сюда вставлять пример (Знак без текста, напр. Apple, Nike) -->
+                            <img src="Frame 5.png" alt="Символический тип" class="w-full h-full object-contain">
+                        </div>
+                        <label class="p-4 flex items-start cursor-pointer select-none bg-white has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="main_type" value="Символический" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 mt-0.5" checked>
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Символический / Абстрактный знак</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Только графический элемент или иконка без букв.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 2. Текстовый -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <!-- Сюда вставлять пример (Только текст, напр. Google, Sony) -->
+                            <img src="Frame 1.png" alt="Frame 1.png" class="w-full h-full object-contain">
+                        </div>
+                        <label class="p-4 flex items-start cursor-pointer select-none bg-white has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="main_type" value="Текстовый" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 mt-0.5">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Текстовый / Шрифтовой</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Название компании, решенное за счет уникальной гарнитуры.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 3. Комбинированный -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <!-- Сюда вставлять пример (Иконка + текст, напр. Adidas, Burger King) -->
+                            <img src="Frame 4.png" alt="Комбинированный тип" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-4 flex items-start cursor-pointer select-none bg-white has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="main_type" value="Комбинированный" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 mt-0.5">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Комбинированный</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Иконка (знак) и текстовая часть используются вместе.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 4. Леттеринг / Эмблема -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <!-- Сюда вставлять пример (Герб, сложная вязь, напр. Starbucks, Harley-Davidson) -->
+                            <img src="Frame 3.png" alt="Эмблема / Леттеринг" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-4 flex items-start cursor-pointer select-none bg-white has-[:checked]:bg-blue-50/20">
+                            <input type="radio" name="main_type" value="Леттеринг" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 mt-0.5">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Эмблема / Леттеринг</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Сложная форма (герб, печать) или надпись, созданная вручную.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Блок 5: Характер шрифта -->
+            <section class="space-y-4">
+                <h2 class="text-xl font-bold text-slate-950 border-b border-slate-100 pb-2 flex items-center gap-2">
+                    <span class="flex items-center justify-center bg-slate-900 text-white w-6 h-6 rounded-full text-xs">5</span>
+                    Предпочтения по типографике <span class="text-xs font-normal text-slate-500 ml-1">(какой шрифт ближе компании?)</span>
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <label class="border border-slate-200 rounded-xl p-4 text-center cursor-pointer hover:bg-slate-50 transition block select-none has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/30">
+                        <input type="radio" name="typography" value="Засечки" class="hidden" checked>
+                        <span class="block text-xl font-serif text-slate-900 font-bold mb-1">Aa</span>
+                        <span class="text-xs font-bold text-slate-800 block">Антиква / С засечками</span>
+                        <span class="text-[10px] text-slate-500 block mt-0.5">Классика, премиум, надежность</span>
+                    </label>
+                    <label class="border border-slate-200 rounded-xl p-4 text-center cursor-pointer hover:bg-slate-50 transition block select-none has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/30">
+                        <input type="radio" name="typography" value="Гротеск" class="hidden">
+                        <span class="block text-xl font-sans text-slate-900 font-extrabold mb-1">Aa</span>
+                        <span class="text-xs font-bold text-slate-800 block">Гротеск / Без засечек</span>
+                        <span class="text-[10px] text-slate-500 block mt-0.5">Современность, минимализм, IT</span>
+                    </label>
+                    <label class="border border-slate-200 rounded-xl p-4 text-center cursor-pointer hover:bg-slate-50 transition block select-none has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/30">
+                        <input type="radio" name="typography" value="Рукописный" class="hidden">
+                        <span class="block text-xl italic text-slate-900 font-medium mb-1">Aa</span>
+                        <span class="text-xs font-bold text-slate-800 block">Рукописный / Скрипт</span>
+                        <span class="text-[10px] text-slate-500 block mt-0.5">Утонченность, крафт, уют</span>
+                    </label>
+                    <label class="border border-slate-200 rounded-xl p-4 text-center cursor-pointer hover:bg-slate-50 transition block select-none has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/30">
+                        <input type="radio" name="typography" value="Футуристичный" class="hidden">
+                        <span class="block text-xl tracking-widest text-slate-900 font-mono font-bold mb-1">AA</span>
+                        <span class="text-xs font-bold text-slate-800 block">Технологичный</span>
+                        <span class="text-[10px] text-slate-500 block mt-0.5">Геометрия, хайтек, будущее</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Блок 6: Геометрия знака / Формы -->
+            <section class="space-y-4">
+                <h2 class="text-xl font-bold text-slate-950 border-b border-slate-100 pb-2 flex items-center gap-2">
+                    <span class="flex items-center justify-center bg-slate-900 text-white w-6 h-6 rounded-full text-xs">6</span>
+                    Форма и геометрия восприятия
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <label class="border border-slate-200 rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-slate-50 transition select-none has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/30">
+                        <input type="radio" name="geometry_shape" value="Круг" class="accent-blue-600">
+                        <div>
+                            <span class="block text-sm font-bold text-slate-900">Мягкие формы (Круг / Овал)</span>
+                            <span class="block text-xs text-slate-500 mt-0.5">Ассоциируется с заботой и безопасностью.</span>
+                        </div>
+                    </label>
+                    <label class="border border-slate-200 rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-slate-50 transition select-none has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/30">
+                        <input type="radio" name="geometry_shape" value="Квадрат" class="accent-blue-600">
+                        <div>
+                            <span class="block text-sm font-bold text-slate-900">Стабильные формы (Квадрат)</span>
+                            <span class="block text-xs text-slate-500 mt-0.5">Ассоциируется с прочностью и системностью.</span>
+                        </div>
+                    </label>
+                    <label class="border border-slate-200 rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-slate-50 transition select-none has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/30">
+                        <input type="radio" name="geometry_shape" value="Треугольник" class="accent-blue-600">
+                        <div>
+                            <span class="block text-sm font-bold text-slate-900">Острые формы (Треугольник)</span>
+                            <span class="block text-xs text-slate-500 mt-0.5">Ассоциируется с лидерством и скоростью.</span>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Блок 7: Стили графического решения -->
+            <section class="space-y-4">
+                <div class="border-b border-slate-100 pb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                    <h2 class="text-xl font-bold text-slate-950 flex items-center gap-2">
+                        <span class="flex items-center justify-center bg-slate-900 text-white w-6 h-6 rounded-full text-xs">7</span>
+                        Стили графического решения <span class="text-xs font-normal text-slate-500 ml-1">(выберите не более 3)</span>
+                    </h2>
+                    <span id="styleCount" class="text-xs text-blue-600 bg-blue-50 font-bold px-2.5 py-1 rounded-full mt-1 sm:mt-0 self-start">Выбрано: 0 из 3</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="styleGroup">
+
+                    <!-- 1. Минимализм -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 2.png" alt="Минимализм" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Минимализм" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Минимализм</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Чистые лаконичные формы.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 2. Геометрия -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 6.png" alt="Геометрия" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Геометрия" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Геометрия</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Фигуры, сетки, четкие углы.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 3. Негативное пространство -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 7.png" alt="Контрформа" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Негативное пространство" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Негативное пространство</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Скрытые смыслы внутри силуэта.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 4. Градиенты и Блюр -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 8.png" alt="Градиенты" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Градиенты / Блюр" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Градиенты и блюр</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Плавные переходы, веб-диджитал.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 5. Аллегория и метафора -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 9.png" alt="Метафора" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Аллегория / Метафора" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Аллегория и метафора</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Философский подтекст.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 6. Этника -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 10.png" alt="Этника" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Этника" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Этника и узоры</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Культурные традиции.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 11.png" alt="Этника" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Этника" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Объем и 3D</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Реалистичные текстуры.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 12.png" alt="Этника" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Этника" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Строгий бизнес-стиль</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Деловая стабильность.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:shadow-sm transition bg-white group">
+                        <div class="bg-slate-100 w-full h-32 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
+                            <img src="Frame 13.png" alt="Этника" class="w-full h-full object-contain>
+                            <span class="text-slate-400 text-xs font-medium group-[img]:hidden"></span>
+                        </div>
+                        <label class="p-3 flex items-start cursor-pointer select-none bg-white">
+                            <input type="checkbox" name="style" value="Этника" class="w-4 h-4 text-blue-600 accent-blue-600 mr-3 rounded mt-0.5" onclick="checkStyleLimit(this)">
+                            <div>
+                                <span class="text-sm font-bold text-slate-900 block">Премиум / Аристократизм</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">Роскошный минимализм.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Блок 8: Эмоциональный посыл -->
+            <section class="space-y-6">
+                <h2 class="text-xl font-bold text-slate-950 border-b border-slate-100 pb-2 flex items-center gap-2">
+                    <span class="flex items-center justify-center bg-slate-900 text-white w-6 h-6 rounded-full text-xs">8</span>
+                    Эмоциональный посыл (Ползунки восприятия)
+                </h2>
+                <div class="space-y-6 max-w-2xl mx-auto">
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
+                            <span>Экономичность</span><span>Дороговизна</span>
+                        </div>
+                        <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer outline-none">
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
+                            <span>Женственность</span><span>Мужественность</span>
+                        </div>
+                        <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer outline-none">
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
+                            <span>Молодость / Тренды</span><span>Зрелость / Опыт</span>
+                        </div>
+                        <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer outline-none">
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
+                            <span>Модерн / Хайтек</span><span>Классика / Традиции</span>
+                        </div>
+                        <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer outline-none">
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
+                            <span>Игривость / Юмор</span><span>Серьезность / Строгость</span>
+                        </div>
+                        <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer outline-none">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Инструкция -->
+            <div class="pt-6 border-t border-slate-100">
+                <div class="p-6 bg-amber-50 rounded-2xl border border-amber-100 text-amber-950 space-y-3">
+                    <p class="font-bold text-base flex items-center gap-2">📸 Готово! Как передать бриф дизайнеру:</p>
+                    <ul class="list-disc pl-5 space-y-1.5 text-xs text-amber-900 leading-relaxed">
+                        <li>Просто сделайте <b>скриншот экрана</b> с вашими заполненными ответами.</li>
+                        <li>Если нашли классные референсы или палитру — <b>отправьте ссылки обычным сообщением</b> вместе со скринами.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function checkStyleLimit(checkbox) {
+            const checkedBoxes = document.querySelectorAll('input[name="style"]:checked');
+            const styleCountLabel = document.getElementById('styleCount');
+
+            if (checkedBoxes.length > 3) {
+                checkbox.checked = false;
+                alert('Вы можете выбрать не более 3 ключевых стилей.');
+                return;
+            }
+            styleCountLabel.innerText = `Выбрано: ${checkedBoxes.length} из 3`;
+        }
+    </script>
+</body>
+</html>
